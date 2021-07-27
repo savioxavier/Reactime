@@ -1,14 +1,3 @@
 body {
   background-color: #252839;
 }
-
-#root div.ui.toggle.checkbox input:focus:checked ~ .box:before,
-#root div.ui.toggle.checkbox input:focus:checked ~ label:before,
-#root div.ui.checked.toggle.checkbox > label:before {
-  background-color: #495285 !important;
-}
-
-#root div.ui.toggle.checkbox > label,
-#root div.ui.checked.toggle.checkbox > label {
-  color: #fffafa !important;
-}
