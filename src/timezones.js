@@ -1,146 +1,146 @@
-export const Timezones = {
-  Nieu: {
+export const Timezones = [
+  {
     name: "Nieu",
     tz: "Pacific/Niue",
     offset: "-11",
     alt: ["American Samoa"],
   },
-  Honululu: {
+  {
     name: "Honululu",
     tz: "Pacific/Honolulu",
     offset: "-10",
     alt: ["Hawaii"],
   },
-  Anchorage: {
+  {
     name: "Anchorage",
     tz: "America/Anchorage",
     offset: "-9",
     alt: ["Gambier Islands", "French Polynesia"],
   },
-  LosAngeles: {
+  {
     name: "Los Angeles",
     tz: "America/Los_Angeles",
     offset: "-8",
     alt: ["Vancouver", "Tijuana"],
   },
-  Denver: {
+  {
     name: "Denver",
     tz: "America/Denver",
     offset: "-7",
     alt: ["Edmonton", "Arizona", "Kansas", "Nevada"],
   },
-  CostaRica: {
+  {
     name: "Costa Rica",
     tz: "America/Costa_Rica",
     offset: "-6",
     alt: ["Mexico City", "Chicago", "Winnipeg"],
   },
-  Toronto: {
+  {
     name: "Toronto",
     tz: "America/Toronto",
     offset: "-5",
     alt: ["New York", "Havana", "Lima", "Bogotá", "Kingston", "Quito"],
   },
-  Caracas: {
+  {
     name: "Caracas",
     tz: "America/Caracas",
     offset: "-4",
     alt: ["Santiago", "Santo Domingo", "Puerto Rico"],
   },
-  BuenosAires: {
+  {
     name: "Buenos Aires",
     tz: "America/Argentina/Buenos_Aires",
     offset: "-3",
     alt: ["São Paulo", "Montevideo", "French Guiana"],
   },
-  London: {
+  {
     name: "London",
     tz: "Europe/London",
     offset: "0",
     alt: ["Dublin", "Lisbon", "Abidjan", "Accra", "Dakar"],
   },
-  Paris: {
+  {
     name: "Paris",
     tz: "Europe/Paris",
     offset: "+1",
     alt: ["Berlin", "Rome", "Madrid", "Warsaw"],
   },
-  Athens: {
+  {
     name: "Athens",
     tz: "Europe/Athens",
     offset: "+2",
     alt: ["Cairo", "Johannesburg", "Khartoum", "Bucharest"],
   },
-  Moscow: {
+  {
     name: "Moscow",
     tz: "Europe/Moscow",
     offset: "+3",
     alt: ["Istanbul", "Riyadh", "Baghdad", "Doha"],
   },
-  Tehran: {
+  {
     name: "Tehran",
     tz: "Asia/Tehran",
     offset: "+3.5",
     alt: [],
   },
-  Dubai: {
+  {
     name: "Dubai",
     tz: "Asia/Dubai",
     offset: "+4",
     alt: ["Baku", "Tbilisi", "Yerevan"],
   },
-  Kabul: {
+  {
     name: "Kabul",
     tz: "Asia/Kabul",
     offset: "+4.5",
     alt: [],
   },
-  Delhi: {
+  {
     name: "Delhi",
     tz: "Asia/Kolkata",
     offset: "+5.5",
     alt: ["Mumbai", "Colombo", "Sri Lanka"],
   },
-  Dhaka: {
+  {
     name: "Dhaka",
     tz: "Asia/Dhaka",
     offset: "+6",
     alt: ["Almaty", "Omsk", "Bhutan"],
   },
-  Bangkok: {
+  {
     name: "Bangkok",
     tz: "Asia/Bangkok",
     offset: "+7",
     alt: ["Jakarta", "Ho Chi Minh City"],
   },
-  Beijing: {
+  {
     name: "Beijing",
     tz: "Asia/Shanghai",
     offset: "+8",
     alt: ["Shanghai", "Taipei", "Singapore", "Perth", "Manila"],
   },
-  Tokyo: {
+  {
     name: "Tokyo",
     tz: "Asia/Tokyo",
     offset: "+9",
     alt: ["Seoul", "Pyongyang"],
   },
-  Adelaide: {
+  {
     name: "Adelaide",
     tz: "Australia/Adelaide",
     offset: "+9.5",
     alt: [],
   },
-  Sydney: {
+  {
     name: "Sydney",
     tz: "Australia/Sydney",
     offset: "+10",
     alt: ["Queensland", "Tasmania", "Victoria"],
   },
-  Auckland: {
+  {
     name: "Auckland",
     tz: "Pacific/Auckland",
     offset: "+12",
     alt: ["Suva", "Fiji", "Tuvalu"],
   },
-};
+];

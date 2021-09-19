@@ -4,9 +4,10 @@ import dayjs from "dayjs";
 import utc from "dayjs/plugin/utc";
 import advanced from "dayjs/plugin/advancedFormat";
 import timezone from "dayjs/plugin/timezone";
+import { Timezones } from "../timezones";
 import { styles } from "../styles";
 
-const TimeCard = ({ name, tz, offset, alt }) => {
+const TimeCard = () => {
   dayjs.extend(utc);
   dayjs.extend(timezone);
   dayjs.extend(advanced);
@@ -27,51 +28,58 @@ const TimeCard = ({ name, tz, offset, alt }) => {
     };
   }, [date]);
 
-  let altDisplay;
+  const MappedCards = Timezones.map((Timezones) => {
+    let altDisplay;
+    let timeAlt = Timezones.alt;
 
-  if (!alt.length) {
-    altDisplay = "No major places";
-  } else {
-    altDisplay = alt.map((v) => `${v}, `);
-  }
+    if (!timeAlt.length) {
+      altDisplay = "No major places";
+    } else {
+      altDisplay = timeAlt.map((v) => `${v}, `);
+    }
 
-  const format = dayjs().tz(tz).format("h:mm A");
+    const format = dayjs().tz(Timezones.tz).format("h:mm A");
 
-  return (
-    <Grid.Column>
-      <Reveal animated="move" style={styles.reveal}>
-        <Reveal.Content visible>
-          <Card style={styles.timeCard}>
-            <Card.Content style={styles.timeCardContent}>
-              <Card.Header style={styles.timeCardContent}>{name}</Card.Header>
-              <Card.Meta style={styles.timeCardContent}>
-                <span className="date">{`UTC ${offset}`}</span>
-              </Card.Meta>
-              <Card.Description style={styles.timeCardContent}>
-                {format}
-              </Card.Description>
-            </Card.Content>
-          </Card>
-        </Reveal.Content>
+    return (
+      <Grid.Column>
+        <Reveal animated="move" style={styles.reveal}>
+          <Reveal.Content visible>
+            <Card style={styles.timeCard}>
+              <Card.Content style={styles.timeCardContent}>
+                <Card.Header style={styles.timeCardContent}>
+                  {Timezones.name}
+                </Card.Header>
+                <Card.Meta style={styles.timeCardContent}>
+                  <span className="date">{`UTC ${Timezones.offset}`}</span>
+                </Card.Meta>
+                <Card.Description style={styles.timeCardContent}>
+                  {format}
+                </Card.Description>
+              </Card.Content>
+            </Card>
+          </Reveal.Content>
 
-        <Reveal.Content hidden>
-          <Card style={styles.timeCard}>
-            <Card.Content style={styles.timeCardContent}>
-              <Card.Header style={styles.timeCardContent}>
-                Other major places:
-              </Card.Header>
-              <Card.Meta style={styles.timeCardContent}>
-                <span className="date">{`UTC ${offset}`}</span>
-              </Card.Meta>
-              <Card.Description style={styles.timeCardContent}>
-                {altDisplay}
-              </Card.Description>
-            </Card.Content>
-          </Card>
-        </Reveal.Content>
-      </Reveal>
-    </Grid.Column>
-  );
+          <Reveal.Content hidden>
+            <Card style={styles.timeCard}>
+              <Card.Content style={styles.timeCardContent}>
+                <Card.Header style={styles.timeCardContent}>
+                  Other major places:
+                </Card.Header>
+                <Card.Meta style={styles.timeCardContent}>
+                  <span className="date">{`UTC ${Timezones.offset}`}</span>
+                </Card.Meta>
+                <Card.Description style={styles.timeCardContent}>
+                  {altDisplay}
+                </Card.Description>
+              </Card.Content>
+            </Card>
+          </Reveal.Content>
+        </Reveal>
+      </Grid.Column>
+    );
+  });
+
+  return MappedCards;
 };
 
 export default TimeCard;
