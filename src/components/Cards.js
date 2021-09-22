@@ -35,7 +35,7 @@ const TimeCard = () => {
     if (!timeAlt.length) {
       altDisplay = "No major places";
     } else {
-      altDisplay = timeAlt.map((v) => `${v}, `);
+      altDisplay = timeAlt.toString().replace(/,/g, ", ");
     }
 
     const format = dayjs().tz(Timezones.tz).format("h:mm A");
