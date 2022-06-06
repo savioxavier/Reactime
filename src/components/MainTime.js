@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
-import dayjs from "dayjs";
-import { Container, Grid, Header } from "semantic-ui-react";
-import { styles } from "../styles";
+import React, { useState, useEffect } from 'react';
+import dayjs from 'dayjs';
+import { Container, Grid, Header } from 'semantic-ui-react';
+import { styles } from '../styles';
 
 const MainTime = () => {
   const init = dayjs();
@@ -18,8 +18,8 @@ const MainTime = () => {
     };
   }, [date]);
 
-  const format = dayjs().format("h:mm:ss A");
-  const titleFormat = dayjs().format("h:mm A");
+  const format = dayjs().format('h:mm:ss A');
+  const titleFormat = dayjs().format('h:mm A');
 
   document.title = `Reactime • ${titleFormat}`;
 

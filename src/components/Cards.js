@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
-import { Grid, Card, Reveal } from "semantic-ui-react";
-import dayjs from "dayjs";
-import utc from "dayjs/plugin/utc";
-import advanced from "dayjs/plugin/advancedFormat";
-import timezone from "dayjs/plugin/timezone";
-import { Timezones } from "../timezones";
-import { styles } from "../styles";
+import React, { useState, useEffect } from 'react';
+import { Grid, Card, Reveal } from 'semantic-ui-react';
+import dayjs from 'dayjs';
+import utc from 'dayjs/plugin/utc';
+import advanced from 'dayjs/plugin/advancedFormat';
+import timezone from 'dayjs/plugin/timezone';
+import { Timezones } from '../timezones';
+import { styles } from '../styles';
 
 const TimeCard = () => {
   dayjs.extend(utc);
@@ -33,12 +33,12 @@ const TimeCard = () => {
     let timeAlt = Timezones.alt;
 
     if (!timeAlt.length) {
-      altDisplay = "No major places";
+      altDisplay = 'No major places';
     } else {
-      altDisplay = timeAlt.toString().replace(/,/g, ", ");
+      altDisplay = timeAlt.toString().replace(/,/g, ', ');
     }
 
-    const format = dayjs().tz(Timezones.tz).format("h:mm A");
+    const format = dayjs().tz(Timezones.tz).format('h:mm A');
 
     return (
       <Grid.Column>

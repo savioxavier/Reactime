@@ -13,10 +13,10 @@ export const options = {
       },
     },
     color: {
-      value: ["#495285"],
+      value: ['#495285'],
     },
     destroy: {
-      mode: "split",
+      mode: 'split',
       split: {
         count: 1,
         factor: {
@@ -38,7 +38,7 @@ export const options = {
             enable: false,
           },
           destroy: {
-            mode: "none",
+            mode: 'none',
           },
           life: {
             count: 1,
@@ -75,21 +75,21 @@ export const options = {
     lineLinked: {
       enable: true,
       distance: 150,
-      color: "#ffffff",
+      color: '#ffffff',
       opacity: 0.4,
       width: 1,
     },
     collisions: {
       enable: true,
-      mode: "destroy",
+      mode: 'destroy',
     },
     move: {
       enable: true,
       speed: 3,
-      direction: "none",
+      direction: 'none',
       random: false,
       straight: false,
-      out_mode: "out",
+      out_mode: 'out',
       attract: {
         enable: false,
         rotateX: 600,
