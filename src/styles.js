@@ -3,7 +3,7 @@ const text = '#fffafa';
 const text2 = '#939499';
 const text3 = '#4e66ee';
 
-export const styles = {
+const styles = {
   mainContainer: {
     marginTop: '3rem',
   },
@@ -49,3 +49,5 @@ export const styles = {
     color: text2,
   },
 };
+
+export default styles;

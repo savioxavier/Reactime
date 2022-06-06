@@ -1,4 +1,4 @@
-export const Timezones = [
+const Timezones = [
   {
     name: 'Nieu',
     tz: 'Pacific/Niue',
@@ -144,3 +144,5 @@ export const Timezones = [
     alt: ['Suva', 'Fiji', 'Tuvalu'],
   },
 ];
+
+export default Timezones;

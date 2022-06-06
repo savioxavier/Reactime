@@ -1,4 +1,4 @@
-export const options = {
+const options = {
   fpsLimit: 60,
   backgroundMode: {
     enable: true,
@@ -99,3 +99,5 @@ export const options = {
   },
   detectRetina: true,
 };
+
+export default options;

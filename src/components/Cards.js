@@ -4,8 +4,8 @@ import dayjs from 'dayjs';
 import utc from 'dayjs/plugin/utc';
 import advanced from 'dayjs/plugin/advancedFormat';
 import timezone from 'dayjs/plugin/timezone';
-import { Timezones } from '../timezones';
-import { styles } from '../styles';
+import Timezones from '../timezones';
+import styles from '../styles';
 
 const TimeCard = () => {
   dayjs.extend(utc);
@@ -28,9 +28,9 @@ const TimeCard = () => {
     };
   }, [date]);
 
-  const MappedCards = Timezones.map((Timezones) => {
+  const MappedCards = Timezones.map((mappedTimezones) => {
     let altDisplay;
-    let timeAlt = Timezones.alt;
+    const timeAlt = mappedTimezones.alt;
 
     if (!timeAlt.length) {
       altDisplay = 'No major places';
@@ -38,7 +38,7 @@ const TimeCard = () => {
       altDisplay = timeAlt.toString().replace(/,/g, ', ');
     }
 
-    const format = dayjs().tz(Timezones.tz).format('h:mm A');
+    const format = dayjs().tz(mappedTimezones.tz).format('h:mm A');
 
     return (
       <Grid.Column>
@@ -47,10 +47,10 @@ const TimeCard = () => {
             <Card style={styles.timeCard}>
               <Card.Content style={styles.timeCardContent}>
                 <Card.Header style={styles.timeCardContent}>
-                  {Timezones.name}
+                  {mappedTimezones.name}
                 </Card.Header>
                 <Card.Meta style={styles.timeCardContent}>
-                  <span className="date">{`UTC ${Timezones.offset}`}</span>
+                  <span className="date">{`UTC ${mappedTimezones.offset}`}</span>
                 </Card.Meta>
                 <Card.Description style={styles.timeCardContent}>
                   {format}
@@ -66,7 +66,7 @@ const TimeCard = () => {
                   Other major places:
                 </Card.Header>
                 <Card.Meta style={styles.timeCardContent}>
-                  <span className="date">{`UTC ${Timezones.offset}`}</span>
+                  <span className="date">{`UTC ${mappedTimezones.offset}`}</span>
                 </Card.Meta>
                 <Card.Description style={styles.timeCardContent}>
                   {altDisplay}

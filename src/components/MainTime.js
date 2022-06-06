@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import dayjs from 'dayjs';
 import { Container, Grid, Header } from 'semantic-ui-react';
-import { styles } from '../styles';
+import styles from '../styles';
 
-const MainTime = () => {
+function MainTime() {
   const init = dayjs();
   const [date, setDate] = useState(init);
 
@@ -37,6 +37,6 @@ const MainTime = () => {
       </Grid>
     </Container>
   );
-};
+}
 
 export default MainTime;
